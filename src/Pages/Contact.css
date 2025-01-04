@@ -1,0 +1,110 @@
+.Contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+.contactLeftSide , .contactRightSide{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+.contactLeftSide{
+    background-image: url('../Images/Service\ 24_7-rafiki.png');
+    object-fit: cover;
+    background-size: cover;
+    opacity: 1;
+    padding: 80px;
+    box-shadow: 5px 5px 15px #387f3942;
+    border-radius: 30px;
+}
+.contactLeftSide h3 , .contactRightSide h3{
+    font-size: 34px;
+    font-weight: 600;
+    color: #387f39;
+    padding: 20px;
+}
+.contactRightSide h3{
+    color: #000;
+}
+.contactRightSide{
+    padding: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+}
+.contactLeftSide input , .contactLeftSide textarea{
+    background-color: transparent;
+}
+.contactIcon{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.contactIcon svg{
+    color: #fff;
+    font-size: 40px;
+    padding: 30px;
+    background-color: #387f39;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    border: 1px solid transparent;
+}
+.contactIcon svg:hover{
+    background-color: #fff;
+    color: #387f39;
+    transform: scale(1.09);
+    border: 1px solid #387f39;
+}
+.contactContent{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.contactContent p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #387f39;
+}
+.contactContent h3{
+    font-size: 24px;
+    color: #000;
+    padding: 0px;
+}
+
+
+
+@media screen and (max-width : 900px) {
+    .Contact{
+        flex-direction: column;
+    }
+    .contactLeftSide , .contactRightSide{
+        width: 100%;
+        padding: 20px;
+    }
+    .contactLeftSide label{
+        width: 100%;
+    }
+    .contactRightSide h3{
+        font-size: 26px;
+    }
+    .contactIcon svg{
+        width: 25px;
+        height: 25px;
+        font-size: 30px;
+        padding: 25px;
+    }
+    .contactContent p{
+        font-size: 14px;
+    }
+    .contactContent h3{
+        font-size: 18px;
+    }
+}

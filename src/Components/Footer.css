@@ -1,0 +1,150 @@
+.Footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px 70px;
+    gap: 20px;
+    width: 100%;
+}
+.footerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.right{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.right h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #387f39;
+}
+.right p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.left{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.left .input{
+    width: 90%;
+}
+.mainContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.logo h2{
+    font-size: 18px;
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+}
+table{
+    width: 70%;
+    height: 180px;
+    text-transform: capitalize;
+}
+table th{
+    font-size: 22px;
+    font-weight: 500;
+    color: #387f39;
+    text-align: start;
+    cursor: pointer;
+}
+table td{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+td:hover{
+    color: #387f39;
+}
+.rights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #387f39;
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.icons svg{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px;
+    border: 1px solid #387f39;
+    border-radius: 10px;
+    color: #387f39;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width : 900px) {
+    .Footer{
+        padding: 20px;
+        gap: 0px;
+    }
+    .footerContent{
+        flex-direction: column;
+    }
+    .right , .left{
+        width: 100%;
+    }
+    .right h2{
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    .right p{
+        font-size: 16px;
+    }
+    .left{
+        justify-content: start;
+    }
+    .left .input{
+        width: 100%;
+    }
+    .mainContent{
+        flex-direction: column;
+        gap: 20px;
+    }
+    table{
+        width: 100%;
+    }
+    th{
+        font-size: 16px !important;
+    }
+    td{
+        font-size: 14px !important;
+    }
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+}

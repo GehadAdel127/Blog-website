@@ -1,0 +1,243 @@
+.LogPages , .create{
+    background: linear-gradient(90deg, rgba(136,194,115,1) 2%, rgba(160,214,131,1) 35%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.container{
+    width: 768px;
+    overflow: hidden;
+    border-radius: 30px;
+    max-width: 100%;
+    min-height: 600px;
+    position: relative;
+    background-color: #fff;
+    padding-top: 20px;
+    box-shadow: 0px 5px 15px #00000079;
+}
+.container form{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    max-height: 600px;
+}
+form input{
+    background-color: #eee;
+    margin: 8px 0px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+}
+form textarea{
+    width: 100% !important;
+    height: 180px !important;
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+span{
+    font-size: 12px;
+}
+.toggle p{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0px;
+}
+.container a{
+    font-size: 13px;
+    margin: 15px 0px 10px;
+    color: #333;
+}
+.container button{
+    background-color: #387f39;
+    color: #fff;
+    padding: 10px 45px;
+    font-size: 12px;
+    border-radius: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
+}
+.container button:hover{
+    transform: scale(1.09);
+}
+button.hidden{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.formContainer{
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logIn , .createForm{
+    left: 0px;
+    width: 50%;
+    z-index: 2;
+}
+.container.active .logIn{
+    transform: translateX(100%);
+}
+.signUp{
+    left: 0px;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+.container.active .signUp{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+@keyframes move{
+    0% , 49.9999999%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50% , 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.socialIcons{
+    margin: 20px 0px;
+}
+.socialIcons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 3px;
+    width: 40px;
+    height: 40px;
+}
+.toggleContainer{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+.toggle{
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+    background-color: #387f39;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(136,194,115,1) 2%, rgba(160,214,131,1) 35%);
+    color: #fff;
+}
+.container.active .toggleContainer{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+.container.active .toggle{
+    transform: translateX(50%);
+}
+.togglePannel{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 30px;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+.toggleLeft{
+    transform: translateX(-200%);
+}
+.container.active .toggleLeft{
+    transform: translateX(0);
+}
+.toggleRight{
+    transform: translateX(0);
+    right: 0px;
+}
+.container.active .toggleRight{
+    transform: translateX(200%);
+}
+
+
+
+
+@media screen and (max-width : 600px) {
+    .formContainer{
+        width: 60%;
+    }
+    .container{
+        min-height: 400px;
+    }
+    .formContainer h2{
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .toggleContainer{
+        border-radius: 70px 0 0 40px;
+        width: 40%;
+        left: 60% !important;
+    }
+    .container.active .toggleContainer{
+        border-radius: 0 70px 40px 0;
+    }
+    .container.active .toggleContainer{
+        transform: translateX(-151%);
+    }
+    .container.active .signUp {
+        transform: translateX(70%);
+    }
+    .togglePannel{
+        padding: 0px 15px;
+    }
+    .togglePannel h2{
+        font-size: 18px;
+    }
+    .togglePannel p{
+        font-size: 13px;
+    }
+    form textarea{
+        height: 60px !important;
+    }
+    .container form{
+        padding: 0px 30px !important;
+    }
+    .socialIcons a{
+        width: 30px;
+        height: 30px;
+    }
+    input , input::placeholder{
+        font-size: 13px;
+    }
+    .container button , .hidden{
+        font-size: 11px;
+        font-weight: 400;
+        padding: 10px 20px;
+    }
+}

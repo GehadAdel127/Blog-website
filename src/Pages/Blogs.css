@@ -1,0 +1,24 @@
+.Blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Blogs h3{
+    font-size: 40px;
+    font-weight: 500;
+    color: #387f39;
+    text-align: start;
+    width: 100%;
+    padding: 35px;
+    text-decoration: underline;
+}
+.loadMore button , .post{
+    padding: 20px 35px;
+    background-color: #387f39;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+}

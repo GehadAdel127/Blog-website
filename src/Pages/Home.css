@@ -1,0 +1,219 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    gap: 30px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.content h1{
+    font-size: 42px;
+    font-weight: 600;
+    color: #387f39;
+}
+.content p{
+    font-size: 22px;
+    font-weight: 500;
+    color: gray;
+    width: 30%;
+}
+.input{
+    display: flex;
+    gap: 0px;
+    padding: 40px 0px;
+    width: 50%;
+}
+.input input{
+    padding: 20px;
+    border: 1px solid #387f39;
+    border-radius: 30px 0px 0px 30px;
+    width: 80%;
+    outline: none;
+    font-size: 16px;
+    color: #387f39;
+    font-weight: 500;
+}
+input::placeholder{
+    font-size: 16px;
+    color: #387f39;
+}
+.input button{
+    background-color: #387f39;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 0px 30px 30px 0px;
+    cursor: pointer;
+}
+.sections{
+    padding: 35px;
+}
+.sections ul {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+li {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: gray;
+    position: relative;
+    padding-bottom: 10px;
+}
+li:hover, li.active {
+    color: #387f39;
+}
+li::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    transition: background-color 0.3s ease;
+}
+li.active::after {
+    background-color: #387f39;
+    height: 3px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, height 0.3s ease;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+hr{
+    width: 100%;
+    background-color: #387f39;
+    height: 1px;
+    display: block;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 20px;
+    width: 300px;
+    height: 670px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.card img{
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+.card .overlay {
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    opacity: 1;
+    color: #fff;
+    transition: opacity 0.3s ease;
+    border-radius: 0px 0px 20px 20px;
+    display: none;
+}
+.card .overlay p {
+    margin: 0;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+.card:hover  .overlay{
+    display: flex;
+}
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    height: 180px;
+}
+.card:hover .cardContent h2{
+    text-decoration: underline;
+    color: #387f39;
+}
+.cardContent p{
+    color: gray;
+    font-size: 18px;
+    height: 65px;
+    overflow: hidden;
+}
+.readPost button{
+    width: 150px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.readPost img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width : 900px) {
+    .Home{
+        padding: 25px;
+    }
+    .content{
+        align-items: center;
+    }
+    .content h1{
+        font-size: 22px;
+    }
+    .content p{
+        font-size: 16px;
+        width: 50%;
+    }
+    .input {
+        width: 100%;
+    }
+    .sections{
+        padding: 10px;
+    }
+    .sections li{
+        font-size: 12px;
+    }
+    .cardContent h2{
+        font-size: 22px;
+    }
+}

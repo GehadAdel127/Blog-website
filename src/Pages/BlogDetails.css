@@ -1,0 +1,143 @@
+.BlogDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.blogContent{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.blogContent img{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.blogInfo{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.blogInfo h2{
+    color: #387f39;
+}
+.blogInfo p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.autherInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #387f39;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 20px 0px;
+}
+.comments{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #cccccc2d;
+}
+.CommentsUP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: #387f39;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 10px;
+}
+.commentsCard{
+    background-color: #387f3952;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    transition: 0.6s ease-in-out;
+}
+.commentsCard:hover{
+    transform: scale(1.04);
+}
+.authorContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+}
+.authorContent span{
+    font-size: 18px;
+    font-weight: 700;
+    color: #387f39;
+}
+.date{
+    color: #4b4a4a;
+}
+.reply{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+}
+.reply h3{
+    font-size: 24px;
+}
+label{
+    font-size: 18px;
+    width: 48%;
+}
+textarea{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid #387f39;
+    padding: 20px;
+}
+.labelContainer , .inputContainer{
+    display: flex;
+    align-items: start;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+}
+input{
+    padding: 20px;
+    border: 1px solid #387f39;
+    border-radius: 10px;
+    width: 48%;
+    font-size: 16px;
+}
+
+
+
+
+@media screen and (max-width : 900px) {
+    .BlogDetails{
+        padding: 15px;
+    }
+    .blogContent img{
+        height: 400px;
+    }
+}
